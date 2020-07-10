@@ -1,0 +1,33 @@
+Neural network with 1-hidden layer
+\documentclass{standalone}
+
+\usepackage{neuralnetwork}
+
+\begin{document}
+    \begin{neuralnetwork}[height=4]
+        \newcommand{\x}[2]{$x_#2$}
+        \newcommand{\y}[2]{$\hat{y}_#2$}
+        \newcommand{\hfirst}[2]{\small $h^{(1)}_#2$}
+        \newcommand{\hsecond}[2]{\small $h^{(2)}_#2$}
+        \inputlayer[count=3, bias=true, title=Input layer, text=\x]
+        \hiddenlayer[count=4, bias=false, title=Hidden layer, text=\hfirst] \linklayers
+        \outputlayer[count=1, title=Output layer, text=\y] \linklayers
+    \end{neuralnetwork}
+\end{document}
+
+Simple Neuron
+\documentclass{standalone}
+
+\usepackage{neuralnetwork}
+
+\begin{document}
+    \begin{neuralnetwork}[height=3]
+        \newcommand{\x}[2]{$x_#2$}
+        \newcommand{\y}[2]{$\hat{y}_#2$}
+        \newcommand{\hfirst}[2]{\small $h^{(1)}_#2$}
+        \newcommand{\hsecond}[2]{\small $h^{(2)}_#2$}
+        \inputlayer[count=2, bias=true, title=Input layer, text=\x]
+        
+        \outputlayer[count=1, title=Output layer, text=\y] \linklayers
+    \end{neuralnetwork}
+\end{document}

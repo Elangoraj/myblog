@@ -1,0 +1,315 @@
+$content-max-width: 75rem;
+$primary-color: #3c4043;
+$body-color: #1a1a1a;
+$main-white: #fff;
+$link-color: #ea4812;
+
+@mixin transition {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.main {
+  padding-top: 3.18rem;
+  padding-bottom: 4.8rem;
+  background-color: $main-white;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 4.15rem;
+    padding-bottom: 6.15rem;
+  }
+}
+
+.container {
+  max-width: $content-max-width;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  max-width: 460px;
+  margin: 0 auto;
+  //-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: 1fr;
+  grid-row-gap: 3rem;
+  grid-column-gap: 25px;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 812px;
+  }
+
+  @media screen and (min-width: 960px) {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+  }
+}
+
+.filter-posts,
+.description {
+  // display: flex;
+  // flex-direction: column;
+  text-align: center;
+  //justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.447;
+  margin-bottom: 4.18rem;
+
+  @media screen and (min-width: 480px) {
+    font-size: 2rem;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 2.5rem;
+  }
+
+  .filter-posts-heading {
+    display: block;
+    line-height: 1.41667;
+    //margin-bottom: 10px;
+    @media screen and (min-width: 480px) {
+      display: inline-block;
+    }
+  }
+
+  /*Filter Bolg Posts */
+  .select-box-container {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10px 0 0;
+
+    @media screen and (min-width: 480px) {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: -5px;
+      background-color: #161922;
+      height: 1px;
+    }
+  }
+
+  .select-box-arrow {
+    position: relative;
+    display: inline-block;
+    right: -11px;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    top: 8px;
+  }
+
+  .select-box-arrow-down {
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8px solid rgba($body-color, 0.6);
+  }
+  .select-box-arrow-up {
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid rgba($body-color, 0.6);
+  }
+
+  .drop-down-container {
+    position: absolute;
+    top: 63px;
+    right: 0;
+    left: 0;
+    display: block;
+    padding: 0;
+    min-width: 157px;
+    margin: 0;
+    @include transition;
+    height: auto;
+
+    border-radius: 2px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 15px 30px 0 rgba(244, 79, 24, 0.09); // rgba(54, 57, 73, 0.09);
+    box-shadow: 0 15px 30px 0 rgba(244, 79, 24, 0.09),
+      inset 0 -1px 0 0 $link-color;
+    z-index: 8;
+    overflow: hidden;
+
+    @media screen and (min-width: 768px) {
+      min-width: 297px;
+    }
+  }
+
+  .drop-down-list {
+    //overflow-y: scroll;
+    height: auto;
+    margin: 0;
+
+    // @media screen and (min-width: 960px) {
+    //   overflow: hidden;
+    //   height: auto;
+    // }
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // right: -17px;
+    // bottom: -17px;
+    // z-index: 1;
+  }
+
+  .drop-down-item {
+    padding: 20px 30px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.66667;
+    text-align: left;
+    //@include transition;
+
+    &:hover {
+      background-color: #f6f8f9; // #20232a;
+      color: $link-color;
+      opacity: 0.8;
+    }
+
+    &.selected {
+      background-color: #f6f8f9; // #20232a;
+      opacity: 0.8;
+      color: $link-color;
+    }
+  }
+}
+
+.list-item {
+  border: 1px solid #f2f2f2;
+  position: relative;
+
+  a {
+    text-decoration: none;
+    color: $primary-color;
+
+    &:hover {
+      .entry-header::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.post-summary-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.entry-title {
+  font-size: 1.3rem;
+  padding: 15px 10px;
+  font-weight: 600;
+  margin: 0 0 2.5625rem;
+
+  // @media screen and (min-width: 480px) {
+  //   font-size: 1.3rem;
+  // }
+
+  @media screen and (min-width: 768px) {
+    padding: 1.25rem 0.9375rem;
+  }
+  // @media screen and (min-width: 992px) {
+  //   font-size: 1.8rem;
+  //   line-height: 34px;
+  //   padding: 1.25rem 0.9375rem;
+  // }
+}
+
+.entry-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 0.69375rem 1.1875rem;
+  font-size: 0.775rem;
+  color: rgba($body-color, 0.7);
+
+  @media screen and (min-width: 768px) {
+    padding-left: 0.9775rem;
+    padding-right: 0.9775rem;
+  }
+}
+
+.divider {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 2px;
+    background: #727274;
+    position: absolute;
+    top: 7px;
+    left: 2px;
+  }
+}
+
+.time {
+  margin-left: 8px;
+}
+
+.entry-header {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    @include transition;
+  }
+}
+
+// Tags List
+
+.tag-list {
+  position: relative;
+  margin: 13px 22px;
+  a {
+    color: #26282d;
+    &:hover {
+      color: $link-color;
+      text-decoration: underline;
+    }
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    left: -23px;
+    top: 9px;
+    background: $link-color;
+  }
+}
