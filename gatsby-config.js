@@ -6,7 +6,7 @@ module.exports = {
     twitterHandle: `MalikAarif1430`,
     linkedin: `maarif1430`,
     github: `Aarif1430`,
-    siteUrl: `http://localhost:8000/`,
+    siteUrl: `https://malikaarif.netlify.app/`,
   },
 
   plugins: [
