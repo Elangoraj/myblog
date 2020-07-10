@@ -37,7 +37,14 @@ const BlogPage = ({ data }) => (
 
 export const pageQuery = graphql`
   query BlogIndexQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {
+        frontmatter: {
+          category: { in: ["Machine Learning", "Python Programming"] }
+        }
+      }
+    ) {
       edges {
         node {
           id

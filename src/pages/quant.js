@@ -5,9 +5,9 @@ import Layout from "../components/layout"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
 
-const ExperimentPage = ({ data }) => (
+const QuantPage = ({ data }) => (
   <Layout>
-    <h3> My Experiment </h3>
+    <h3> Quant Finance </h3>
     {data.allMarkdownRemark.edges.map(post => (
       <div key={post.node.id}>
         <h3>
@@ -36,10 +36,10 @@ const ExperimentPage = ({ data }) => (
 )
 
 export const pageQuery = graphql`
-  query ExperimentPostIndexQuery {
+  query QuantPostIndexQuery {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { in: ["Nature"] } } }
+      filter: { frontmatter: { category: { in: ["Quant"] } } }
     ) {
       edges {
         node {
@@ -58,4 +58,4 @@ export const pageQuery = graphql`
     }
   }
 `
-export default ExperimentPage
+export default QuantPage

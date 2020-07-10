@@ -35,7 +35,7 @@ const Header = ({ siteTitle }) => (
     <div style={{ display: `flex` }}>
       <h5 className="headerMenu">
         <Link
-          to="/"
+          to="/blog"
           style={{
             color: `white`,
             textDecoration: `none`,
@@ -68,7 +68,7 @@ const Header = ({ siteTitle }) => (
       </h5>
       <h5 className="headerMenu">
         <Link
-          to="/"
+          to="/quant"
           style={{
             color: `white`,
             textDecoration: `none`,

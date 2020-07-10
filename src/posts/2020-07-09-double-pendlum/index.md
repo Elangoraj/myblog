@@ -1,9 +1,9 @@
 ---
 path: "/double_pendlum"
 date: "2020-07-09"
-title: "Understanding Chaos theory using double pendlum experiment"
+title: "Understanding Chaos system using double pendlum experiment"
 author: "Aarif Malik"
-desc: "A simple explanation of chaos system works."
+desc: "Chaotic systems are predictable for a while and then 'appear' to become random. "
 category: "Nature"
 customjs:
   - https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js

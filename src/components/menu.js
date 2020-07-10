@@ -20,7 +20,7 @@ const Menu = () => (
     <ul className="menu-items">
       <li>
         <Link
-          to="/"
+          to="/blog"
           style={{
             color: `white`,
             textDecoration: `none`,
@@ -53,7 +53,7 @@ const Menu = () => (
       </li>
       <li>
         <Link
-          to="/blog"
+          to="/quant"
           style={{
             color: `white`,
             textDecoration: `none`,
