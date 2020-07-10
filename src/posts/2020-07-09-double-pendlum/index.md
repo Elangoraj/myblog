@@ -14,4 +14,5 @@ customjs:
 
 ## Description
 
-Chaotic system is exteremely sensitive to initial conditions. A chaotic system is not actually random, if we give enough time to system we can actually predict the deterministic behaviour of the system.
+Chaotic system is exteremely sensitive to initial conditions. A chaotic system is not actually random, if we give enough time to system we can actually predict the deterministic behaviour of the system.<br></br>
+The link for source code is availabe at [Chaos_System](https://github.com/Aarif1430/Chaos-System)
