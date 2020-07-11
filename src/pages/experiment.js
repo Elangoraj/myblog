@@ -4,6 +4,14 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
+import styled from "styled-components"
+import Image from "gatsby-image"
+
+const BannerImage = styled(Image)`
+  border-radius: 10px;
+  width: 45rem;
+  margin-top: 20px;
+`
 
 const ExperimentPage = ({ data }) => (
   <Layout>
@@ -26,6 +34,12 @@ const ExperimentPage = ({ data }) => (
         <p style={{ fontSize: "1rem", marginBottom: "0", marginTop: "0.7rem" }}>
           {post.node.frontmatter.desc}
         </p>
+        <Link to={post.node.frontmatter.path}>
+          <BannerImage
+            fluid={post.node.frontmatter.featured.childImageSharp.fluid}
+            alt="Banner Image"
+          />
+        </Link>
         <br></br>
         <Link to={post.node.frontmatter.path}>Read More</Link>
         <br></br>
@@ -51,6 +65,13 @@ export const pageQuery = graphql`
             author
             category
             desc
+            featured {
+              childImageSharp {
+                fluid(maxWidth: 400) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           excerpt
         }

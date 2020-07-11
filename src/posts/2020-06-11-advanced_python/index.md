@@ -5,6 +5,7 @@ title: "Python Advanced Concepts, A thorough explanation of how python works int
 author: "Aarif Malik"
 desc: "A detailed explanation of python as a programming language works and deep dive into different core concepts and optimization techniques."
 category: "Python Programming"
+featured: "./images/dl.png"
 ---
 
 ## Description
