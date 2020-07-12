@@ -9,7 +9,7 @@ import Image from "gatsby-image"
 
 const BannerImage = styled(Image)`
   border-radius: 10px;
-  width: 45rem;
+  width: 30rem;
   margin-top: 20px;
 `
 
@@ -31,15 +31,15 @@ const ExperimentPage = ({ data }) => (
             {post.node.frontmatter.category}
           </span>
         </small>
-        <p style={{ fontSize: "1rem", marginBottom: "0", marginTop: "0.7rem" }}>
-          {post.node.frontmatter.desc}
-        </p>
         <Link to={post.node.frontmatter.path}>
           <BannerImage
             fluid={post.node.frontmatter.featured.childImageSharp.fluid}
             alt="Banner Image"
           />
         </Link>
+        <p style={{ fontSize: "1rem", marginBottom: "0", marginTop: "0.7rem" }}>
+          {post.node.frontmatter.desc}
+        </p>
         <br></br>
         <Link to={post.node.frontmatter.path}>Read More</Link>
         <br></br>
