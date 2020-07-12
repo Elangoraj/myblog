@@ -5,7 +5,7 @@ title: "Basics of Neural Networks, An Intuitive Introduction to Neural Networks"
 author: "Aarif Malik"
 category: "Machine Learning"
 desc: "A simple neural approach to pattern recoginition and how to implement one from scratch in Python."
-featured: "./images/dl.png"
+featured: "./images/n_image.png"
 ---
 
 ## Perceptron
