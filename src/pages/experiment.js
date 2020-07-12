@@ -10,19 +10,13 @@ import Image from "gatsby-image"
 const BannerImage = styled(Image)`
   width: 20rem;
   margin-top: 20px;
+  height: 15rem;
 `
 
 const ExperimentPage = ({ data }) => (
   <Layout>
     <h3> My Experiment </h3>
-    <div
-      className="experiment-grid"
-      style={{
-        gridTemplateColumns: `repeat(2,1fr)`,
-        gridColumnGap: `25px`,
-        display: `grid`,
-      }}
-    >
+    <div className="experiment-grid">
       {" "}
       {data.allMarkdownRemark.edges.map(post => (
         <div

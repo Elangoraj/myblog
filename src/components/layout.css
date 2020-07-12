@@ -747,9 +747,9 @@ th {
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 4), inset 0 -1px 0 0 #dadce0;
 }
 
-.experiment_grid {
+.experiment-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 25px;
 }
 
@@ -783,6 +783,10 @@ th {
 @media all and (max-width: 900px) {
   html {
     font-size: 100%;
+  }
+
+  .experiment-grid {
+    display: block;
   }
 
   .sidebar {

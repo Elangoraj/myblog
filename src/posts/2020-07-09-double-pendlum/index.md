@@ -3,7 +3,7 @@ path: "/double_pendlum"
 date: "2020-07-09"
 title: "Understanding Chaos system using double pendlum experiment"
 author: "Aarif Malik"
-desc: "Chaotic systems are predictable for a while and then 'appear' to become random. "
+desc: "Given enough time, two identical setups, set to initial conditions that are as identical as possible, will look entirely different. "
 category: "Nature"
 featured: "./images/pendlum.png"
 ---
