@@ -5,7 +5,7 @@ title: "Face recognition and identification, A closer look at python face-recogi
 author: "Aarif Malik"
 desc: "A simple explanation of how facial recoginition works and how to built one using python."
 category: "Machine Learning"
-featured: "./images/dl.png"
+featured: "./images/face.jpg"
 ---
 
 ## Description

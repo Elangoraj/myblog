@@ -26,8 +26,13 @@ const IndexPage = ({ data }) => (
               {post.node.frontmatter.category}
             </span>
           </small>
+
           <p
-            style={{ fontSize: "1rem", marginBottom: "0", marginTop: "0.7rem" }}
+            style={{
+              fontSize: "1rem",
+              marginBottom: "0",
+              marginTop: "0.7rem",
+            }}
           >
             {post.node.frontmatter.desc}
           </p>
@@ -43,14 +48,7 @@ const IndexPage = ({ data }) => (
 
 export const pageQuery = graphql`
   query PostIndexQuery {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: {
-        frontmatter: {
-          category: { in: ["Machine Learning", "Python Programming"] }
-        }
-      }
-    ) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id
