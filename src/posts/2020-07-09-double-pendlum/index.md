@@ -1,7 +1,7 @@
 ---
 path: "/double_pendlum"
 date: "2020-07-09"
-title: "Understanding Chaos system using double pendlum experiment"
+title: "Chaos system using double pendlum experiment"
 author: "Aarif Malik"
 desc: "Chaotic system is exteremely sensitive to initial conditions. A chaotic system is not actually random "
 category: "Nature"

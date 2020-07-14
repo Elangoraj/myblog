@@ -15,7 +15,6 @@ const BannerImage = styled(Image)`
 
 const BlogPage = ({ data }) => (
   <Layout>
-    <h3> Latest Posts </h3>
     <div className="experiment-grid">
       {data.allMarkdownRemark.edges.map(post => (
         <div key={post.node.id}>

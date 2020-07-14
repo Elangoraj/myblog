@@ -10,7 +10,6 @@ const IndexPage = ({ data }) => (
       <Menu />
     </div>
     <section className="blog">
-      <h3> Latest Posts </h3>
       {data.allMarkdownRemark.edges.map(post => (
         <div key={post.node.id}>
           <h3>
@@ -26,13 +25,8 @@ const IndexPage = ({ data }) => (
               {post.node.frontmatter.category}
             </span>
           </small>
-
           <p
-            style={{
-              fontSize: "1rem",
-              marginBottom: "0",
-              marginTop: "0.7rem",
-            }}
+            style={{ fontSize: "1rem", marginBottom: "0", marginTop: "0.7rem" }}
           >
             {post.node.frontmatter.desc}
           </p>
@@ -48,7 +42,14 @@ const IndexPage = ({ data }) => (
 
 export const pageQuery = graphql`
   query PostIndexQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {
+        frontmatter: {
+          category: { in: ["Machine Learning", "Python Programming"] }
+        }
+      }
+    ) {
       edges {
         node {
           id

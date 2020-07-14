@@ -15,7 +15,6 @@ const BannerImage = styled(Image)`
 
 const ExperimentPage = ({ data }) => (
   <Layout>
-    <h3> My Experiment </h3>
     <div className="experiment-grid">
       {" "}
       {data.allMarkdownRemark.edges.map(post => (
