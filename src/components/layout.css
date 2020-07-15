@@ -47,9 +47,9 @@ template {
   display: none;
 }
 
-a:hover {
+/* a:hover {
   color: red;
-}
+} */
 a {
   color: blue;
   background-color: transparent;
