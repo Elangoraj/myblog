@@ -7,7 +7,6 @@ import Layout from "../components/layout"
 
 const QuantPage = ({ data }) => (
   <Layout>
-    <h3> Quant Finance </h3>
     {data.allMarkdownRemark.edges.map(post => (
       <div key={post.node.id}>
         <h3>

@@ -1,9 +1,9 @@
 ---
 path: "/approximate_pi"
 date: "2020-07-11"
-title: "Estimating Pi using the Monte Carlo Method"
+title: "Calculating value of Pi using the monte-Carlo simulation"
 author: "Aarif Malik"
-desc: "Estimate a value of Pi using the Monte Carlo method - generate a large number of random points and see how many fall in the circle enclosed by the unit square.. "
+desc: "Generate a large number of random points and see how many fall in the circle enclosed by the square "
 category: "Nature"
 featured: "./images/pi.png"
 ---

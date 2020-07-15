@@ -10,7 +10,6 @@ const IndexPage = ({ data }) => (
       <Menu />
     </div>
     <section className="blog">
-      <h3> Latest Posts </h3>
       {data.allMarkdownRemark.edges.map(post => (
         <div key={post.node.id}>
           <h3>
