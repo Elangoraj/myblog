@@ -1,15 +1,15 @@
-import React from "react"
-import linkedin from "../images/linkedin.png"
-import git from "../images/git.png"
-import mail from "../images/mail.png"
-import Link from "gatsby-link"
+import React from "react";
+import linkedin from "../images/linkedin.png";
+import git from "../images/git.png";
+import mail from "../images/mail.png";
+import Link from "gatsby-link";
 
 const Menu = () => (
   <>
     <ul
       style={{
         listStyle: `None`,
-        color: `white`,
+        color: `white`
       }}
     >
       <h4>Aarif Malik</h4>
@@ -17,80 +17,67 @@ const Menu = () => (
         Software Developer
       </p>
     </ul>
-    <ul className="menu-items">
-      <li>
-        <Link
-          to="/blog"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          Blog
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="/about"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          About
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="/experiment"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          Experiments
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="/quant"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          Quant Finance
-        </Link>
-      </li>
-    </ul>
-    <ul style={{ color: `white` }}>
-      <ul className="social">
-        <li>
-          <a href="https://www.linkedin.com/in/maarif1430/" target="_">
-            <img
-              alt="Linkedin"
-              src={linkedin}
-              style={{ height: `1rem`, width: `1rem` }}
-            />
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/Aarif1430/" target="_">
-            <img
-              alt="GitHub"
-              src={git}
-              style={{ height: `1rem`, width: `1rem` }}
-            />
-          </a>
-        </li>
-        <li>
+    <div className="menu-items">
+      <Link
+        to="/blog"
+        style={{
+          color: `white`,
+          textDecoration: `none`
+        }}
+      >
+        Blog
+      </Link>
+
+      <Link
+        to="/about"
+        style={{
+          color: `white`,
+          textDecoration: `none`
+        }}
+      >
+        About
+      </Link>
+
+      <Link
+        to="/experiment"
+        style={{
+          color: `white`,
+          textDecoration: `none`
+        }}
+      >
+        Experiments
+      </Link>
+
+      <Link
+        to="/quant"
+        style={{
+          color: `white`,
+          textDecoration: `none`
+        }}
+      >
+        Quant Finance
+      </Link>
+    </div>
+    <div class="go-social" style={{ color: `white` }}>
+      <div className="social">
+        <a href="../images/icons8-linkedin-100.png" target="_">
           <img
-            alt="Email"
-            src={mail}
+            alt="Linkedin"
+            src={linkedin}
             style={{ height: `1rem`, width: `1rem` }}
           />
-        </li>
-      </ul>{" "}
+        </a>
+
+        <a href="../images/icons8-linkedin-100.png" target="_">
+          <img
+            alt="GitHub"
+            src={git}
+            style={{ height: `1rem`, width: `1rem` }}
+          />
+        </a>
+
+        <img alt="Email" src={mail} style={{ height: `1rem`, width: `1rem` }} />
+      </div>{" "}
       <footer>
         ©{new Date().getFullYear()} {` `}{" "}
         <a href="https://www.linkedin.com/in/maarif1430/" target="_">
@@ -98,8 +85,8 @@ const Menu = () => (
           Aarif Malik{" "}
         </a>{" "}
       </footer>
-    </ul>{" "}
+    </div>{" "}
   </>
-)
+);
 
-export default Menu
+export default Menu;
