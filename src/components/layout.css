@@ -756,7 +756,7 @@ th {
   display: grid;
 }
 .blog {
-  padding: 1rem 12rem 2rem;
+  padding: 1rem 16rem 2rem;
   overflow-y: scroll;
   position: relative;
 }
