@@ -4,7 +4,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaTwitter,
-  FaEnvelope,
+  FaEnvelope
 } from "react-icons/fa"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -35,9 +35,6 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/blog">Blog</a>{" "}
-              </li>
-              <li>
-                <a href="/contact">Contact</a>{" "}
               </li>
             </ul>
           </div>
