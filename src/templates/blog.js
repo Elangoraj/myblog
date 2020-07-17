@@ -95,7 +95,7 @@ const Blog = ({ data, pageContext }) => {
                 <a
                   className={blogPageStyles.editPost}
                   href={
-                    "https://github.com/Aarif1430/myblog/tree/master/src" +
+                    "https://github.com/Aarif1430/myblog/tree/master/src/" +
                     pageContext.postPath
                   }
                   target="_blank"
