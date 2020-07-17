@@ -1,0 +1,48 @@
+$link-color: #ea4812;
+$sidebar-bg-color: #fff; //#edeff1;
+
+.listContainer {
+  font-size: 16px;
+  ul {
+    border: 1px solid #f0f0f0;
+    padding: 12px 17px;
+    font-size: 15px;
+    line-height: 28px;
+    background-color: $sidebar-bg-color;
+    a {
+      color: inherit;
+      .hot {
+        float: left;
+        font-size: 13px;
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        svg {
+          margin-bottom: -2px;
+        }
+      }
+      &:hover,
+      &:focus {
+        color: $link-color;
+      }
+    }
+  }
+}
+
+.subTitle {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  @media screen and(min-width: 1200px) {
+    margin-bottom: 12px;
+  }
+}
+
+.image-container {
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: -1px;
+}

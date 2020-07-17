@@ -4,8 +4,7 @@ import React from "react"
 import shareStyles from "../../templates/blogpage.module.scss"
 import {
   FaFacebookF,
-  FaGithub,
-  FaWhatsapp,
+  // FaGithub,
   FaLinkedinIn,
   FaTwitter,
 } from "react-icons/fa"
@@ -18,7 +17,7 @@ const ShareItems = ({
   customClass,
   siteUrl,
 }) => {
-  const baseUrl = `${siteUrl}`
+  const baseUrl = `${siteUrl}/blog/`
 
   //console.log(slug, title, twitterHandle, customClass, siteUrl, baseUrl)
 
@@ -27,7 +26,7 @@ const ShareItems = ({
       <div className={`${customClass} ${shareStyles.shareContainer}`}>
         <p className={shareStyles.shareTitle}>{heading}</p>
         <div className={shareStyles.socialShare}>
-          <ul style={{ listStyleType: `none` }}>
+          <ul>
             <li>
               <a
                 className={shareStyles.twitter}
@@ -36,6 +35,7 @@ const ShareItems = ({
                 href={
                   "https://twitter.com/share?url=" +
                   baseUrl +
+                  slug +
                   "/&text=" +
                   title +
                   "&via=" +
@@ -73,33 +73,6 @@ const ShareItems = ({
                 }
               >
                 <FaLinkedinIn />
-              </a>
-            </li>
-            <li>
-              <a
-                className={shareStyles.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                href={
-                  "https://www.github.com/shareArticle?url=" +
-                  baseUrl +
-                  slug +
-                  "/"
-                }
-              >
-                <FaGithub />
-              </a>
-            </li>
-            <li>
-              <a
-                className={shareStyles.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                href={
-                  "https://web.whatsapp.com/send?text=" + baseUrl + slug + "/"
-                }
-              >
-                <FaWhatsapp />
               </a>
             </li>
           </ul>

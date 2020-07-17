@@ -1,0 +1,327 @@
+// =====================================================
+// Hero
+// ======================
+@mixin transition {
+  transition: all 0.5s linear;
+}
+
+$link-color: #ea4812;
+
+$body-font: "Roboto",
+"Nunito",
+"Muli",
+"Helvetica Neue",
+Helvetica,
+"Segoe UI",
+"Helvetica Neue",
+sans-serif;
+
+.homePageHero,
+.errorPageHero {
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.homePageHero {
+  // background: #f8f9fa;
+  background-position: right;
+  // background-repeat: no-repeat;
+  background-image: url("../../images/simulation.png");
+
+  @media screen and (min-width: 768px) {
+    background-position: left;
+  }
+}
+
+.errorPageHero {
+  background: #ffffff;
+}
+
+.hero-content {
+  margin: 0 auto;
+  padding: 4rem 15px;
+  text-align: center;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  max-width: 36rem;
+
+  @media screen and (min-width: 768px) {
+    max-width: 45rem;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1.1rem;
+  font-family: $body-font;
+  line-height: 1.17647;
+  font-weight: normal;
+  max-width: 34em;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: 480px) {
+    font-size: 2.2rem;
+    line-height: 1.14583em;
+
+    .nlt {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    font-size: 2.5rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 2.7rem;
+    line-height: 1.24583em;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 3.25rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    // font-size: 3.7rem;
+    letter-spacing: -0.03125rem;
+  }
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  padding-top: 0;
+  line-height: 1.625rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.125rem;
+    line-height: 1.85rem;
+  }
+}
+
+// .title {
+//   font-size: 1.4rem;
+//   margin-bottom: 2.5rem;
+//   font-weight: 300;
+//   padding-top: 0;
+
+//   position: relative;
+
+//   &::before {
+//     content: "";
+//     display: block;
+//     width: 5.75rem;
+//     height: 1px;
+//     background: #f55f2d;
+//     position: absolute;
+//     bottom: -44px;
+//     left: 50%;
+//     margin-left: -2.875rem;
+
+//     // @media screen and (min-width: 960px) {
+//     //   bottom: -3.5rem;
+//     // }
+//   }
+
+//   @media screen and (min-width: 600px) {
+//     font-size: 1.7rem;
+//     line-height: 1.44667;
+//   }
+//   @media screen and (min-width: 768px) {
+//     font-size: 2rem;
+//   }
+//   @media screen and (min-width: 1200px) {
+//     font-size: 2.9rem;
+//   }
+// }
+
+.nl {
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
+// .description {
+//   letter-spacing: 0;
+//   margin-bottom: 5.5rem;
+//   font-size: 2.1rem;
+//   line-height: 1.17647;
+//   font-weight: 600;
+//   max-width: 34em;
+//   margin-right: auto;
+//   margin-left: auto;
+//   padding-top: 44px;
+
+//   @media screen and (min-width: 480px) {
+//     font-size: 2.4rem;
+//     line-height: 1.14583em;
+//   }
+//   @media screen and (min-width: 768px) {
+//     font-size: 3rem;
+//   }
+//   @media screen and (min-width: 1200px) {
+//     font-size: 3.11rem;
+//   }
+// }
+.hero-button-container {
+  a {
+    display: block;
+    max-width: 157px;
+    margin: 0 auto;
+    // text-align: center;
+    // border-radius: 2px;
+    line-height: 1.5;
+    //padding: 0.8rem 1rem;
+    //height:46px;
+    outline: none;
+    padding: 10px 24px;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.03rem;
+
+    background: $link-color;
+    color: #fff;
+    @include transition;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    // @media screen and (min-width: 768px) {
+    //   max-width: 330px;
+    // }
+    // @media screen and (min-width: 768px) {
+    //   max-width: 360px;
+    //   padding: 0.9rem 1rem;
+    // }
+  }
+
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  //width: 100%;
+}
+
+// .start-here {
+//   a {
+//     //border: 1px solid #f55f2d;
+//     background: #f55f2d;
+//     color: #fff;
+//     @include transition;
+//     &:hover {
+//       cursor: pointer;
+//       opacity: 0.8;
+//     }
+//   }
+// }
+
+.error-title {
+  font-size: 34px;
+  line-height: 1.17647;
+  font-weight: 600;
+  text-transform: capitalize;
+
+  @media screen and (min-width: 480px) {
+    font-size: 55px;
+    line-height: 1;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 82px;
+    line-height: 1.11905;
+  }
+}
+
+.error-description {
+  margin: 2em auto 0;
+  font-size: 18px;
+  line-height: 1.66667;
+  font-weight: 300;
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+    line-height: 1.41667;
+  }
+}
+
+.error-button {
+  margin-top: 50px;
+
+  @media screen and (min-width: 480px) {
+    margin-top: 100px;
+  }
+
+  a {
+    //border: 1px solid #f55f2d;
+    background: $link-color;
+    color: #fff;
+    @include transition;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+
+.arrow {
+  background-color: #fff;
+  border-radius: 100px;
+  -webkit-box-shadow: 0 4px 8px #dadce0;
+  box-shadow: 0 4px 8px #dadce0;
+  display: block;
+  margin: 0 auto;
+  height: 50px;
+  width: 50px;
+  color: #444;
+  margin-bottom: 25px;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    height: 58px;
+    width: 58px;
+
+    &:hover {
+      svg {
+        margin-bottom: -22px;
+      }
+    }
+  }
+
+  svg {
+    margin-bottom: -18px;
+    margin-left: 16px;
+    font-size: 17px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: -24px;
+      margin-left: 16px;
+      font-size: 24px;
+    }
+  }
+}
+
+// .contact {
+//   margin-top: 3px;
+//   a {
+//     border: 1px solid #e9e9e9;
+//     background: #fff;
+//     color: inherit;
+//   }
+//   @media screen and (min-width: 768px) {
+//     margin-top: 0;
+//   }
+// }
+// .button {
+//   @media screen and (min-width: 768px) {
+//     margin: 0 4px;
+//     width: 40%;
+//   }
+// }

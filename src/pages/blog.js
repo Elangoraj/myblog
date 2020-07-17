@@ -1,89 +1,55 @@
 import React from "react"
-import { Link } from "gatsby"
+
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-// import Image from "../components/image"
-// import SEO from "../components/seo"
-import Image from "gatsby-image"
-import styled from "styled-components"
+//import Post from "../components/post"
 
-const BannerImage = styled(Image)`
-  width: 20rem;
-  margin-top: 20px;
-  height: 15rem;
-`
+import SEO from "../components/seo"
+//import Hero from "../components/hero"
+import BlogItems from "../components/BlogPage/blogItems"
 
-const BlogPage = ({ data }) => (
-  <Layout>
-    <div className="experiment-grid">
-      {data.allMarkdownRemark.edges.map(post => (
-        <div key={post.node.id}>
-          <h3>
-            <Link className="postTitle" to={post.node.frontmatter.path}>
-              {post.node.frontmatter.title}
-            </Link>
-          </h3>
-          <small style={{ fontSize: "1rem", fontStyle: "italic" }}>
-            {" "}
-            {post.node.frontmatter.date}
-            {"  "}
-            <span style={{ color: "#DAA520", fontWeight: "Bold" }}>
-              {post.node.frontmatter.category}
-            </span>
-          </small>
-          <Link to={post.node.frontmatter.path}>
-            <BannerImage
-              fluid={post.node.frontmatter.featured.childImageSharp.fluid}
-              alt="Banner Image"
-            />
-          </Link>
-          <p
-            style={{ fontSize: "1rem", marginBottom: "0", marginTop: "0.7rem" }}
-          >
-            {post.node.frontmatter.desc}
-          </p>
-          <br></br>
-          <Link to={post.node.frontmatter.path}>Read More</Link>
-          <br></br>
-          <hr></hr>
-        </div>
-      ))}
-    </div>
-  </Layout>
-)
+const BlogPage = ({ data }) => {
+  return (
+    <Layout>
+      <SEO
+        title="Blog Articles"
+        description="Read our articles and start learning the tools and strategy required for your next web development project."
+      />
+      <BlogItems items={data} />
+    </Layout>
+  )
+}
 
-export const pageQuery = graphql`
-  query BlogIndexQuery {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: {
-        frontmatter: {
-          category: { in: ["Machine Learning", "Python Programming"] }
-        }
-      }
-    ) {
+export default BlogPage
+
+export const query = graphql`
+  query {
+    allMdx(sort: { fields: [frontmatter___dateUpdated], order: DESC }) {
       edges {
         node {
           id
           frontmatter {
-            path
             title
-            date(formatString: "MMMM DD, YYYY")
-            author
             category
-            desc
+            datePublished(formatString: "MMMM Do, YYYY")
+            dateUpdated(formatString: "MMMM Do, YYYY")
             featured {
               childImageSharp {
-                fluid(maxWidth: 400) {
+                fluid(maxWidth: 600) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
           }
-          excerpt
+          fields {
+            slug {
+              name
+            }
+          }
+          timeToRead
         }
       }
     }
   }
 `
-export default BlogPage

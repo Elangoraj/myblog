@@ -20,7 +20,6 @@ $main-aside-max-width: 730px;
     justify-content: space-between;
   }
 }
-
 .wrap {
   padding-top: 3rem;
   padding-bottom: 3.2rem;
@@ -48,7 +47,6 @@ $main-aside-max-width: 730px;
     padding: 25px;
     border: 1px solid #f0f0f0;
   }
-
   @media screen and (min-width: 1300px) {
     width: 67%;
     max-width: 780px;
@@ -62,16 +60,12 @@ $main-aside-max-width: 730px;
   letter-spacing: 0.25px;
   max-width: $main-aside-max-width;
   margin: 0 auto;
-
   @media screen and (min-width: 960px) {
     width: 30.134%;
     margin: 0;
   }
-
   @media screen and (min-width: 1280px) {
-    width: 22%;
-    position: fixed;
-    padding: 5rem 1rem 1rem;
+    width: 29%;
   }
 }
 
@@ -84,7 +78,6 @@ $main-aside-max-width: 730px;
   li {
     margin-right: 0.46rem;
     margin-bottom: 0.66rem;
-
     a {
       text-decoration: none;
       background-color: #e5f5f8;
@@ -125,7 +118,6 @@ $main-aside-max-width: 730px;
     font-size: 2rem;
   }
 }
-
 .post-meta {
   font-size: 0.77rem;
   line-height: 1.66667rem;
@@ -137,7 +129,6 @@ $main-aside-max-width: 730px;
 .author-avatar {
   display: inline-block;
   color: inherit;
-
   img {
     width: 32px;
     max-width: 32px;
@@ -147,28 +138,23 @@ $main-aside-max-width: 730px;
     display: inline-block;
     border: 1px solid #eaeaea;
   }
-
   // &:hover,
   // &:focus {
   //   text-decoration: underline;
   // }
 }
-
 .edit-post {
   svg {
     font-size: 9px;
     margin-left: 3px;
   }
-
   &:hover {
     text-decoration: underline;
   }
 }
-
 .divider {
   margin-right: 10px;
   position: relative;
-
   &::after {
     content: "";
     display: block;
@@ -188,7 +174,6 @@ $main-aside-max-width: 730px;
     margin-bottom: 1.8667rem;
   }
 }
-
 .entry-content {
   line-height: 1.68;
   font-weight: inherit;
@@ -207,12 +192,11 @@ $main-aside-max-width: 730px;
     margin-bottom: 0.2333333333335em;
   }
 
-  li>p {
+  li > p {
     margin-bottom: 0 !important;
   }
 
   a {
-
     &:hover,
     &:focus,
     &:active {
@@ -246,27 +230,21 @@ $main-aside-max-width: 730px;
   ol {
     margin-bottom: 30px;
   }
-
   h2 {
     font-size: 1.5rem;
-
     @media screen and (min-width: 480px) {
       font-size: 1.65rem;
     }
-
     @media screen and (min-width: 768px) {
       font-size: 1.9rem;
     }
   }
-
   h3 {
     font-size: 1.05rem;
-
     @media screen and (min-width: 480px) {
       font-size: 1.3rem;
     }
   }
-
   h2,
   h3 {
     line-height: 1.3777em;
@@ -276,12 +254,12 @@ $main-aside-max-width: 730px;
   }
 }
 
-.entry-content ol+h2,
-.entry-content ol+h3,
-.entry-content p+h2,
-.entry-content p+h3,
-.entry-content ul+h2,
-.entry-content ul+h3,
+.entry-content ol + h2,
+.entry-content ol + h3,
+.entry-content p + h2,
+.entry-content p + h3,
+.entry-content ul + h2,
+.entry-content ul + h3,
 .entry-content h2,
 .entry-content h3 {
   padding-top: 1em;
@@ -322,7 +300,6 @@ p img {
 .bottom-social-share {
   .social-share {
     margin-top: 1.5rem;
-
     ul {
       display: flex;
       flex-flow: row wrap;
@@ -330,7 +307,6 @@ p img {
 
       li {
         margin: 8px 0;
-
         a {
           border-radius: 2px;
           cursor: pointer;
@@ -338,7 +314,6 @@ p img {
           padding: 5px 29px 3px;
           color: #fff;
           @include transition;
-
           &:hover {
             opacity: 0.8;
           }
@@ -357,7 +332,7 @@ p img {
 
   .share-container {
     @media screen and (min-width: 960px) {
-      left: 90%;
+      left: 62.5%;
     }
 
     @media screen and (min-width: 1300px) {
@@ -376,8 +351,7 @@ p img {
     border: 0;
 
     &.shareNotInView {
-      visibility: visible;
-      transform: translateX(0);
+      visibility: hidden;
       transition: all 0.5s ease-out;
     }
 
@@ -387,27 +361,21 @@ p img {
       transition: all 0.5s ease-out;
     }
   }
-
   .share-title {
     font-size: 1rem;
   }
-
   ul {
     margin: 0;
-
     li {
       margin: 21px 0;
-
       a {
         border-radius: 2px;
         cursor: pointer;
-        padding: 14px 14px 6px;
+        padding: 9px 21px 6px;
         color: #fff;
-
         &:hover {
           opacity: 0.8;
         }
-
         // @media screen and (min-width: 1300px) {
         //   padding-left: 27px;
         //   padding-right: 27px;
@@ -429,16 +397,6 @@ p img {
 
 .linkedin {
   background: #0d77b7;
-  border: 1px solid #0d77b7;
-}
-
-.github {
-  background: #000000;
-  border: 1px solid #0d77b7;
-}
-
-.whatsapp {
-  background: green;
   border: 1px solid #0d77b7;
 }
 
@@ -477,7 +435,6 @@ p img {
     right: 12px;
     bottom: 100px;
   }
-
   @media screen and (min-width: 1280px) {
     bottom: 30px;
   }

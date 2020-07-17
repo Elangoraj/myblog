@@ -1,0 +1,317 @@
+@mixin transition {
+  transition: all 0.3s ease-out;
+}
+
+$max-width: 70rem;
+$link-color: #ea4812;
+// About Hero
+
+.about-hero {
+  background: #fafafa;
+  overflow: hidden;
+  @media screen and (min-width: 960px) {
+    height: calc(100vh - 6rem);
+    display: flex;
+    min-height: 36rem;
+  }
+}
+
+.content-wrapper {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding-top: 6rem; // 4rem;
+  padding-bottom: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column-reverse;
+
+  .field-submit {
+    background-color: $link-color;
+
+    &:hover {
+      background: rgba($link-color, 0.8);
+      color: #fff;
+    }
+  }
+  .form-fields {
+    @media screen and (min-width: 768px) {
+      margin: 0;
+      max-width: 25rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    // padding-top: 6rem;
+    padding-top: 10rem;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: -4rem;
+  }
+}
+
+.wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.heading-wrap {
+  padding-top: 3rem;
+  text-align: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 4.75rem;
+    height: 2px;
+    background: $link-color;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    margin-left: -2.25rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 4rem;
+  }
+}
+
+.image-content {
+  @media screen and (min-width: 960px) {
+    margin-top: 60px;
+  }
+  img {
+    height: auto;
+    max-width: 100%;
+    width: 14.25rem;
+    min-height: 20rem;
+    margin-bottom: 3rem;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0px;
+    }
+    @media screen and (min-width: 960px) {
+      width: 22rem;
+    }
+  }
+}
+.banner-content {
+  margin-bottom: 6rem;
+  // max-width: 18rem;
+
+  @media screen and (min-width: 768px) {
+    flex: 0 0 60%;
+    text-align: left;
+  }
+
+  @media screen and (min-width: 600px) {
+    max-width: 27rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.27647;
+    font-weight: normal;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+
+    @media screen and (min-width: 480px) {
+      font-size: 2.4rem;
+      line-height: 1.04583em;
+    }
+    @media screen and (min-width: 768px) {
+      max-width: 430px;
+    }
+    @media screen and (min-width: 960px) {
+      font-size: 3rem;
+      letter-spacing: -0.03125rem;
+      max-width: 450px;
+    }
+  }
+  .description {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 1.667rem;
+    @media screen and (min-width: 768px) {
+      max-width: 430px;
+    }
+    @media screen and (min-width: 960px) {
+      max-width: 450px;
+    }
+  }
+}
+
+// .nl {
+//   @media screen and (min-width: 960px) {
+//     display: block;
+//   }
+// }
+
+.about {
+  background-color: #fff;
+  @media screen and (min-width: 960px) {
+    padding-bottom: 1rem;
+  }
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.static-content {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  @media screen and (min-width: 768px) {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.65;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.subscribe {
+  color: #fff;
+  background: url(../../images/newsletter-bg.jpg) center top no-repeat;
+  padding: 110px 0 100px;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
+.image-filter {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.subscibe-content {
+  max-width: 72rem;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.form-content {
+  margin: 0 auto;
+  .heading {
+    font-size: 1.5rem;
+    line-height: 1.44em;
+    font-weight: 600;
+    color: inherit;
+    margin-bottom: 1.667rem;
+
+    @media screen and (min-width: 480px) {
+      font-size: 1.8rem;
+      line-height: 1.2em;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 2.2rem;
+    }
+    @media screen and (min-width: 960px) {
+      font-size: 2.6rem;
+    }
+  }
+  .description {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 1.667rem;
+    line-height: 1.667;
+    color: inherit;
+    @media screen and (min-width: 768px) {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+  }
+}
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  max-width: 24rem;
+  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    max-width: 33rem;
+  }
+}
+
+.nl-subcribe {
+  @media screen and (min-width: 480px) {
+    display: block;
+  }
+}
+
+.field-input,
+.field-submit {
+  height: 50px;
+  font-size: inherit;
+}
+
+.field-input {
+  padding: 0px 25px;
+  border: 1px solid #f2f2f2;
+  margin-bottom: 4px;
+  color: #444;
+  outline: none;
+  @media screen and (min-width: 768px) {
+    flex: 6;
+    margin-bottom: 0;
+  }
+}
+.field-submit {
+  color: #fff;
+  background-color: $link-color;
+  border: 1px solid $link-color;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  @include transition;
+
+  @media screen and (min-width: 768px) {
+    flex: 4;
+    font-size: 1rem;
+  }
+
+  &:hover {
+    background-color: rgba($color: #ff7a59, $alpha: 0.8);
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.success {
+  color: #282828;
+  font-weight: 400;
+}
+
+.error {
+  color: #ff0000;
+  font-weight: 400;
+  a {
+    text-decoration: underline;
+  }
+}
+
+.success,
+.error {
+  margin-top: 20px;
+}

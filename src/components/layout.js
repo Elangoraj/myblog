@@ -7,40 +7,25 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
+import "../styles/index.scss"
+
+import layoutStyles from "./layout.module.scss"
+
+//import child components
+import Header from "./globals/header"
+import Footer from "./globals/footer"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />{" "}
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 950,
-          padding: `3rem 1.0875rem 1.45rem`,
-        }}
-      >
-        <main> {children} </main>{" "}
-        <footer style={{ textAlign: `end` }}>
-          {" "}
-          ©{new Date().getFullYear()}, {` `}{" "}
-          <a href="https://www.linkedin.com/in/maarif1430/"> Aarif Malik </a>{" "}
-        </footer>{" "}
-      </div>{" "}
-    </>
+    <div className={layoutStyles.container}>
+      <div className={layoutStyles.content}>
+        <Header />
+        <div className={layoutStyles.mainContent}>{children}</div>
+      </div>
+      <Footer />
+    </div>
   )
 }
 

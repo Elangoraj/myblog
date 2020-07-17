@@ -1,0 +1,235 @@
+$header-bg-color: #ffffff;
+$main-white: #fff;
+$nav-link: #1a1a1a;
+$content-max-width: 75rem;
+$link-color: #ea4812;
+
+// mixins
+@mixin transition {
+  transition: all 0.35s ease-out;
+  -webkit-transition: all 0.35s ease-out;
+  -moz-transition: all 0.35s ease-out;
+  -ms-transition: all 0.35s ease-out;
+  -o-transition: all 0.35s ease-out;
+}
+
+.container {
+  background: $header-bg-color;
+
+  height: 3.75rem;
+  color: $main-white;
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), inset 0 -1px 0 0 #dadce0;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), inset 0 -1px 0 0 #dadce0;
+}
+.content {
+  display: flex;
+  padding: 0 15px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: $content-max-width;
+  margin: 0 auto;
+  height: 3.75rem;
+}
+
+.brand-link {
+  img {
+    width: 138px;
+    margin: 0;
+  }
+}
+
+.nav-link {
+  display: block;
+  padding: 1.4rem 0;
+  line-height: 1.3125rem;
+  font-size: 1.1rem;
+  color: $nav-link;
+  margin-left: 0;
+  letter-spacing: -0.03em;
+  text-transform: capitalize;
+  text-decoration: none;
+  @include transition;
+
+  // @media screen and (min-width: 768px) {
+  //   // opacity: 0.7;
+  //   // letter-spacing: 0;
+  // }
+
+  &:hover {
+    color: $link-color;
+    @media screen and (min-width: 768px) {
+      // opacity: 1;
+      color: $nav-link;
+    }
+  }
+
+  &.active-nav-item {
+    color: $link-color;
+    @media screen and (min-width: 768px) {
+      opacity: 1;
+      color: $nav-link;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    padding: 6px 0;
+    font-size: 0.96rem;
+    font-weight: 300;
+    position: relative;
+    opacity: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: $nav-link;
+      opacity: 0;
+      @include transition;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &.active-nav-item {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Navigation Menu
+// =================================================
+
+.menu-btn {
+  cursor: pointer;
+  // z-index: 103;
+  //transition: all 0.5s ease-out;
+  @include transition;
+  .btn-line {
+    width: 24px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: $nav-link;
+    @include transition;
+  }
+  //rotate into X with Menu lines
+  &.close {
+    transform: rotate(180deg);
+    .btn-line {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.menu-nav {
+  position: fixed;
+  top: 0;
+  max-width: 300px;
+  width: 70%;
+  overflow-y: scroll;
+  background: $header-bg-color;
+  right: 0;
+  height: 100%;
+  top: 0;
+  margin: 0;
+  padding: 4rem 0 0;
+  text-align: center;
+  z-index: -1; //102;
+  visibility: hidden;
+  transform: translate3d(100%, 0, 0);
+  @include transition;
+  list-style: none;
+
+  &.show-nav {
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+  }
+
+  @media screen and (min-width: 768px) {
+    position: static;
+    display: flex;
+    overflow-y: initial;
+    flex-direction: row;
+    max-width: 100%;
+    width: auto;
+    height: inherit;
+    padding: 0;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+    background: transparent;
+  }
+}
+
+// .brand,
+.navbar {
+  z-index: 99;
+}
+
+.nav-item {
+  &:last-child {
+    a {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 2.5rem;
+    &:last-child {
+      a {
+        margin-bottom: 0rem;
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 3.4rem;
+  }
+}
+
+// Overlay
+// =================================================
+
+.sidebar-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  z-index: 10;
+  visibility: hidden;
+
+  &.show-overlay {
+    visibility: visible;
+  }
+}
+
+body {
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+}
