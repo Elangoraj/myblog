@@ -11,7 +11,7 @@ import RecentPosts from "../components/home/recentPosts"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Blog!" />
+    <SEO title="We live in simulation!" />
     <main className="main" role="main">
       <Hero />
 

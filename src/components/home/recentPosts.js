@@ -10,7 +10,7 @@ const RecentPosts = () => {
     query {
       allMdx(
         sort: { fields: [frontmatter___dateUpdated], order: DESC }
-        limit: 3
+        limit: 6
       ) {
         edges {
           node {
