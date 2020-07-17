@@ -30,7 +30,7 @@ The algebraic notation will look like:
 
 Let's write a simple code for above perceptron using python, we will built everything from scratch without using any packages, the mathematics looks pretty simple we calculate loss for each input and update weights accordingly.
 
-```
+```python
 from random import random
 
 class Perceptron(object):
@@ -151,7 +151,7 @@ Where, ${ w }^{ (2) }=\left[ \begin{matrix} { w }_{ 11 }^{ (2) } \\ { w }_{ 21 }
 
 ## Coding implemenatation of neuron
 
-```
+```python
 
 import numpy as np
 
@@ -211,7 +211,7 @@ The **cost function** is a function of ${w}$ and ${b}$. Since we have less contr
 
 > $MSE=C({w},{b})$
 
-```
+```python
     def cost(self, X, y):
         self.yHat = self.feedforward(X)
         J = 0.5 * sum((y - self.yHat) ** 2)
@@ -265,7 +265,7 @@ Again, from **equation-4**; $ \overset { \wedge  }{ y }  = \sigma({ z }^{ (3) })
 
 Now, we will add another method **derivative of a sigmoid function** to a Neuron class.
 
-```
+```python
 def sigmoidPrime(z):
     return np.exp(-z)/((1+np.exp(-z))**2)
 
@@ -336,7 +336,7 @@ From **equation-1** ${z}^{(2)}$ is a function of input $X$ and ${w}^{(1)}$. Ther
 
 we will add one more method to our **Neuron class** to compute gardient i.e $\frac { \partial J }{ \partial { w }^{ (2) } }$ and $\frac { \partial J }{ \partial { w }^{ (1) } }$
 
-```
+```python
     def cost_derivative(self, X, y):
         self.yHat = self.feedforward(X)
         delta3 = np.multiply(-(y-self.yHat), self.sigmoidPrime(self.z3))
@@ -351,7 +351,7 @@ we will add one more method to our **Neuron class** to compute gardient i.e $\fr
 A **gradient descent** is an algorithm for finding the nearest **local minimum** of a function. The method of **steepest descent**, also called the gradient descent method, starts at a point $
 { P }_{ 0 }$ and, as many times as needed moves from ${ P }_{ i }$ to ${ P }_{ i+1 }$ by minimizing along the line. Our goal here is to find the weights and biases so that the output from the network approximates ${y}{(x)}$ for all training inputs.
 
-```
+```python
     def gradient_descent(self, X, y, iterations):
         cost_check = list()
         learn_rate = 0.1
