@@ -45,16 +45,6 @@ const Footer = () => {
               <a href="mailto:malikarif13@gmail.com">malikarif13@gmail.com</a>
             </p>
           </div>
-          <div className={footerStyles.site}>
-            <h3>Site</h3>
-            <a
-              href={`${data.site.siteMetadata.siteUrl}/rss.xml`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              RSS
-            </a>
-          </div>
         </div>
         <div className={footerStyles.ftBottom}>
           <p className={footerStyles.copy}>

@@ -10,7 +10,7 @@ module.exports = {
     twitterHandle: `MalikAarif1430`,
     linkedin: `maarif1430`,
     github: `Aarif1430`,
-    siteUrl: `https://malikaarif.netlify.app/`,
+    siteUrl: `https://malikaarif.netlify.app/`
   },
   plugins: [
     {
@@ -18,9 +18,9 @@ module.exports = {
       options: {
         trackingId: "UA-154777810-1",
         // this option places the tracking script into the head of the DOM
-        head: true,
+        head: true
         // other options
-      },
+      }
     },
     {
       resolve: `gatsby-plugin-nprogress`,
@@ -28,8 +28,8 @@ module.exports = {
         // Setting a color is optional.
         color: `#ff7a59`,
         // Disable the loading spinner.
-        showSpinner: false,
-      },
+        showSpinner: false
+      }
     },
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-robots-txt`,
@@ -37,8 +37,8 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         // I exclude individual tags pages in sitemap
-        exclude: ["/tags/*"],
-      },
+        exclude: ["/tags/*"]
+      }
     },
     {
       resolve: `gatsby-plugin-feed-mdx`,
@@ -75,9 +75,9 @@ module.exports = {
                   enclosure: edge.node.frontmatter.featured && {
                     url:
                       site.siteMetadata.siteUrl +
-                      edge.node.frontmatter.featured.publicURL,
+                      edge.node.frontmatter.featured.publicURL
                   },
-                  custom_elements: [{ "content:encoded": edge.node.html }],
+                  custom_elements: [{ "content:encoded": edge.node.html }]
                 })
               })
             },
@@ -109,24 +109,24 @@ module.exports = {
             }
             `,
             output: "/rss.xml",
-            title: "Ibaslogic",
+            title: "StepIntoSimulation",
             // optional configuration to insert feed reference in pages:
             // if `string` is used, it will be used to create RegExp and then test if pathname of
             // current page satisfied this regular expression;
             // if not provided or `undefined`, all pages will have feed reference inserted
-            match: "^/blog/",
-          },
-        ],
-      },
+            match: "^/blog/"
+          }
+        ]
+      }
     },
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
         endpoint:
-          "https://app.us10.list-manage.com/subscribe/post?u=22ab4a3227a2f05946ba7adab&amp;id=915058b4a3",
+          "https://app.us10.list-manage.com/subscribe/post?u=22ab4a3227a2f05946ba7adab&amp;id=915058b4a3"
 
         // "https://netlify.us17.list-manage.com/subscribe/post?u=6c865ee0b82dcd3f851e6829a&amp;id=dfefb54d80", // add your MC list endpoint here; see instructions below
-      },
+      }
     },
     // {
     //   resolve: `gatsby-source-contentful`,
@@ -140,8 +140,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src/`,
-      },
+        path: `${__dirname}/src/`
+      }
     },
 
     {
@@ -157,22 +157,22 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 700,
-              linkImagesToOriginal: false,
-            },
+              linkImagesToOriginal: false
+            }
           },
 
           {
             resolve: "gatsby-remark-katex",
             options: {
-              strict: "ignore",
-            },
+              strict: "ignore"
+            }
           },
           {
             resolve: `gatsby-remark-highlight-code`,
             options: {
               terminal: "carbon",
-              theme: "blackboard",
-            },
+              theme: "blackboard"
+            }
           },
 
           {
@@ -193,34 +193,34 @@ module.exports = {
                   language: "superscript",
                   extend: "javascript",
                   definition: {
-                    superscript_types: /(SuperType)/,
+                    superscript_types: /(SuperType)/
                   },
                   insertBefore: {
                     function: {
-                      superscript_keywords: /(superif|superelse)/,
-                    },
-                  },
-                },
+                      superscript_keywords: /(superif|superelse)/
+                    }
+                  }
+                }
               ],
               // Customize the prompt used in shell output
               // Values below are default
               prompt: {
                 user: "root",
                 host: "localhost",
-                global: false,
-              },
-            },
+                global: false
+              }
+            }
           },
 
           {
             resolve: "gatsby-remark-external-links",
             options: {
               target: "_blank",
-              rel: "noopener",
-            },
-          },
-        ],
-      },
+              rel: "noopener"
+            }
+          }
+        ]
+      }
     },
 
     `gatsby-plugin-sharp`,
@@ -229,19 +229,19 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ibaslogic`,
-        short_name: `ibas`,
+        name: `StepIntoSimulation`,
+        short_name: `Simulation`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/arif.png`, // This path is relative to the root of the site.
-      },
+        icon: `src/images/arif.png` // This path is relative to the root of the site.
+      }
     },
 
-    `gatsby-plugin-netlify`,
+    `gatsby-plugin-netlify`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ],
+  ]
 }

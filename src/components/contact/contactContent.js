@@ -23,7 +23,7 @@ const ContactContent = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Ibas on Twitter
+            Arif on Twitter
           </a>
         </p>
         <ContactForm />
