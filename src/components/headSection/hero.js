@@ -5,14 +5,16 @@ import { FaChevronDown } from "react-icons/fa"
 
 const Hero = () => {
   return (
-    <iframe
-      width="100%"
-      height="750"
-      src="https://aarif1430.github.io/animate_css_background/index.html"
-    >
+    <>
+      <iframe
+        width="100%"
+        height="750"
+        src="https://aarif1430.github.io/animate_css_background/index.html"
+      ></iframe>
       <Link
         //activeClass="active"
         to="blog"
+        //spy={true}
         smooth={true}
         offset={-64}
         duration={500}
@@ -20,7 +22,7 @@ const Hero = () => {
       >
         <FaChevronDown />
       </Link>
-    </iframe>
+    </>
   )
 }
 

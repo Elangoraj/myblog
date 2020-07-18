@@ -282,11 +282,15 @@ sans-serif;
   width: 50px;
   color: #444;
   margin-bottom: 25px;
+  margin-top: -8rem;
+  position: relative;
   cursor: pointer;
 
   @media screen and (min-width: 768px) {
     height: 58px;
     width: 58px;
+    position: relative;
+    margin-top: -10rem;
 
     &:hover {
       svg {
