@@ -14,19 +14,19 @@ const Header = () => {
     {
       id: 1,
       path: "/",
-      text: "home",
+      text: "home"
     },
     {
       id: 2,
       path: "/blog/",
-      text: "blog",
+      text: "blog"
     },
 
     {
       id: 4,
       path: "/about/",
-      text: "about",
-    },
+      text: "about"
+    }
   ])
 
   const handleToggle = () => {
@@ -56,7 +56,7 @@ const Header = () => {
       <div className={headerStyles.content}>
         <div className={headerStyles.brand}>
           <Link to="/" className={headerStyles.brandLink}>
-            <h2>Aarif Malik</h2>
+            <h2>epoweriotatheta</h2>
           </Link>
         </div>
 
