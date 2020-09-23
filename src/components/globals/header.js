@@ -21,6 +21,12 @@ const Header = () => {
       path: "/blog/",
       text: "blog"
     },
+    {
+      id: 3,
+      path: "https://teespring.com/stores/epoweriotatheta",
+      text: "store",
+      target: "_blank"
+    },
 
     {
       id: 4,
