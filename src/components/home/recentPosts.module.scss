@@ -1,6 +1,7 @@
 @mixin transition {
   transition: all 0.5s ease-out;
 }
+
 $max-width: 75rem;
 $link-color: #ea4812;
 
@@ -16,9 +17,10 @@ $link-color: #ea4812;
   margin-bottom: 3.5rem;
 
   @media screen and (min-width: 768px) {
-    padding-top: 5rem;
+    padding-top: 0rem;
     margin-bottom: 5rem;
   }
+
   @media screen and (min-width: 960px) {
     max-width: $max-width;
     margin-bottom: 0;
@@ -33,6 +35,7 @@ $link-color: #ea4812;
     @media screen and (min-width: 768px) {
       padding-bottom: 6rem;
     }
+
     @media screen and (min-width: 960px) {
       // max-width: 1150px;
       padding-top: 3rem;
@@ -42,6 +45,7 @@ $link-color: #ea4812;
     }
   }
 }
+
 .sub-styles {
   display: flex;
   justify-content: center;
@@ -55,6 +59,7 @@ $link-color: #ea4812;
     align-items: baseline;
   }
 }
+
 .title-styles {
   @media screen and (min-width: 960px) {
     margin-right: 13px;
@@ -71,12 +76,15 @@ $link-color: #ea4812;
   @media screen and (min-width: 480px) {
     font-size: 1.875rem;
   }
+
   @media screen and (min-width: 768px) {
     margin-bottom: 2.5rem;
   }
+
   @media screen and (min-width: 960px) {
     margin-bottom: 0rem;
   }
+
   @media screen and (min-width: 1024px) {
     font-size: 2rem;
   }
@@ -92,6 +100,7 @@ $link-color: #ea4812;
 
   @media screen and (min-width: 960px) {
     position: relative;
+
     &::after {
       content: "";
       display: block;
@@ -112,6 +121,7 @@ $link-color: #ea4812;
 
   a {
     @include transition;
+
     &:hover {
       text-decoration: underline;
     }
@@ -120,9 +130,11 @@ $link-color: #ea4812;
 
 .article {
   margin-bottom: 3.125rem;
+
   &:last-child {
     margin-bottom: 0;
   }
+
   header {
     margin-bottom: 1.25rem;
 
@@ -131,9 +143,11 @@ $link-color: #ea4812;
       margin-bottom: 0;
       margin-right: 0.7375rem;
     }
+
     @media screen and (min-width: 600px) {
       margin-right: 1.0625rem;
     }
+
     @media screen and (min-width: 960px) {
       margin-right: 0;
       margin-bottom: 1.25rem;
@@ -168,6 +182,7 @@ $link-color: #ea4812;
     @media screen and (min-width: 480px) {
       margin-bottom: 0.25rem;
     }
+
     @media screen and (min-width: 600px) {
       font-size: 1.4375rem;
       margin-bottom: 0.55rem;
@@ -176,10 +191,12 @@ $link-color: #ea4812;
     &:hover {
       color: $link-color;
     }
+
     a {
       color: inherit;
     }
   }
+
   p {
     font-size: 0.9375rem;
     margin: 0;

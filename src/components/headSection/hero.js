@@ -8,10 +8,10 @@ const Hero = () => {
     <>
       <iframe
         width="100%"
-        height="750"
+        height="400"
         src="https://aarif1430.github.io/animate_css_background/index.html"
       ></iframe>
-      <Link
+      {/* <Link
         //activeClass="active"
         to="blog"
         //spy={true}
@@ -21,7 +21,7 @@ const Hero = () => {
         className={heroStyles.arrow}
       >
         <FaChevronDown />
-      </Link>
+      </Link> */}
     </>
   )
 }
