@@ -1,8 +1,8 @@
 ---
 path: "/python_ocr"
-datePublished: "2020-09-30"
-dateModified: "2020-09-30"
-dateUpdated: "2020-09-30"
+datePublished: "2020-05-30"
+dateModified: "2020-05-30"
+dateUpdated: "2020-05-30"
 title: "Character recoginition using Convolutional Neural Network"
 author: "Aarif Malik"
 descritpion: "The MNIST like data set is prepared and CNN is trained on this dataset "
