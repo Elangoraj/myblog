@@ -42,7 +42,7 @@ const Footer = () => {
             <h3>Mail me</h3>
             <p>
               <FaEnvelope />{" "}
-              <a href="mailto:malikarif13@gmail.com">malikarif13@gmail.com</a>
+              <a href="mailto:ganesh0211@gmail.com">ganesh0211@gmail.com</a>
             </p>
           </div>
         </div>

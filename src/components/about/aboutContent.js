@@ -26,7 +26,7 @@ const AboutContent = () => {
           <p>Here is the list of my recent projects:</p>
           <ul>
             <li>
-              <a href="https://aarif1430.github.io/covidtrends/">
+              <a href="https://ganesh0211.github.io/covidtrends/">
                 CovidTrends:{" "}
               </a>
               This interactive charts the new deceased cases of COVID-19 in the
@@ -36,7 +36,7 @@ const AboutContent = () => {
               similar path of exponential growth.
             </li>
             <li>
-              <a href="https://github.com/Aarif1430/Algorithm-Visualizer">
+              <a href="https://github.com/ganesh0211/Algorithm-Visualizer">
                 Algorithm Visualizer:{" "}
               </a>
               Application built using python flask to visualize different

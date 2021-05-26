@@ -62,7 +62,7 @@ const Header = () => {
       <div className={headerStyles.content}>
         <div className={headerStyles.brand}>
           <Link to="/" className={headerStyles.brandLink}>
-            <h2>EPOWERIOTATHETA</h2>
+            <h2>AI Data View</h2>
           </Link>
         </div>
 

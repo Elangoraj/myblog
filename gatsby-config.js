@@ -6,11 +6,11 @@ module.exports = {
   siteMetadata: {
     title: `StepIntoSimulation`,
     description: `Looking for a simple and smarter way to learn the latest web tech? Here, you will learn the perfect strategy that works.`,
-    author: `EPOWERIOTATHETA`,
-    twitterHandle: `MalikAarif1430`,
-    linkedin: `maarif1430`,
-    github: `Aarif1430`,
-    siteUrl: `https://malikaarif.netlify.app/`
+    author: `GANESHKT`,
+    twitterHandle: `ganesh.is018`,
+    linkedin: `ganeshkt`,
+    github: `ganesh0211`,
+    siteUrl: `https://dataview-ai.netlify.app/`
   },
   plugins: [
     {

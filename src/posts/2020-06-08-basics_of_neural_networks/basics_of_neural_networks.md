@@ -4,7 +4,7 @@ datePublished: "2020-06-16"
 dateModified: "2020-06-16"
 dateUpdated: "2020-06-16"
 title: "Basics of Neural Networks, An Intuitive Introduction to Neural Networks"
-author: "Aarif Malik"
+author: "Ganesh KT"
 category: "Machine Learning"
 description: "A simple neural approach to pattern recoginition and how to implement one from scratch in Python."
 featured: "./images/nn_image.png"
@@ -222,9 +222,9 @@ The **cost function** is a function of ${w}$ and ${b}$. Since we have less contr
 - $\frac { 1 }{ 2n } \sum _{ i=1 }^{ n }$ is the mean.
   <br></br>
 
-<iframe width="100%" height="600" frameborder="1" scrolling="no" src="https://plotly.com/~Aarif1430/5/"></iframe>
+<iframe width="100%" height="600" frameborder="1" scrolling="no" src="https://plotly.com/~ganesh0211/5/"></iframe>
 
-<iframe width="100%" height="600" frameborder="1" scrolling="no" src="https://plotly.com/~Aarif1430/3.embed"></iframe>
+<iframe width="100%" height="600" frameborder="1" scrolling="no" src="https://plotly.com/~ganesh0211/3.embed"></iframe>
 
 _The graph is interactive use graph controls to have closer view of the cost function_.<br></br>
 To perform **gradient descent**, $\frac { \partial J }{ \partial w } = ?$. We will use our two weight matrices $w^{(1)}$ and $w^{(2)}$
@@ -273,7 +273,7 @@ def sigmoidPrime(z):
 
 Plotting **sigmoid and sigmoidPrime** for a random array
 
-<iframe width="100%" height="600" frameborder="1" scrolling="no" src="//plotly.com/~Aarif1430/7.embed"></iframe>
+<iframe width="100%" height="600" frameborder="1" scrolling="no" src="//plotly.com/~ganesh0211/7.embed"></iframe>
 
 Therefore, **equation-8** becomes
 
@@ -366,7 +366,7 @@ A **gradient descent** is an algorithm for finding the nearest **local minimum**
 
 After 1000 iterations, we can see cost function decreasing monotonically as network learns.
 
-<iframe width="100%" height="600" frameborder="0" scrolling="no" src="//plotly.com/~Aarif1430/9.embed"></iframe>
+<iframe width="100%" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ganesh0211/9.embed"></iframe>
 Now we can evaluate our gradient and see very small values
 
 ```
