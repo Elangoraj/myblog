@@ -9,8 +9,8 @@ import ContactContent from "../components/contact/contactContent"
 const ContactPage = () => (
   <Layout>
     <SEO
-      title="Get in touch with Arif"
-      description="Do you want to talk about your project? Or have a question for me? Send me an email and I will get back to you shortly."
+      title="Get in touch with Elango"
+      description="Do you have any questions or suggestions for me? Send me an email and I will get back to you shortly."
     />
     <ContactHeading />
     <ContactContent />
