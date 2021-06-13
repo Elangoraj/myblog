@@ -9,7 +9,7 @@ import AboutContent from "../components/about/aboutContent"
 
 const AboutPage = () => (
   <Layout>
-    <SEO title="About Arif" description="A software developer." />
+    <SEO title="About Elango" description="A Data Science Engineer" />
 
     <AboutContent />
   </Layout>
